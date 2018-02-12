@@ -10,6 +10,7 @@ mattermost.keystore
 
 # Xcode
 #
+old
 build/
 *.pbxuser
 !default.pbxuser

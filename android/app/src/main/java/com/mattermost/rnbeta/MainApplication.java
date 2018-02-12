@@ -1,5 +1,9 @@
 package com.mattermost.rnbeta;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 import com.mattermost.share.SharePackage;
 import android.app.Application;
 import android.support.annotation.NonNull;
@@ -91,6 +95,8 @@ public class MainApplication extends NavigationApplication implements INotificat
     setActivityCallbacks(notificationsLifecycleFacade);
 
     SoLoader.init(this, /* native exopackage */ false);
+    AppCenter.start(getApplication(), "5ad58eb4-6f96-40a3-8c93-aa9d3f2f3e59", Analytics.class, Crashes.class);
+
   }
 
   @Override

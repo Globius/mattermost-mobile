@@ -1,5 +1,10 @@
 apply plugin: "com.android.application"
 
+dependencies {
+     def appCenterSdkVersion = '1.2.0' 
+     compile "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+     compile "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}" 
+     }
 import com.android.build.OutputFile
 
 /**
